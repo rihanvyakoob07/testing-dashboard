@@ -1,6 +1,6 @@
 import { LayoutDashboard, BarChart3, Users, Settings, FileText, ChevronLeft } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils";
 
 interface SidebarProps {
@@ -9,13 +9,12 @@ interface SidebarProps {
 }
 
 const navigationItems = [
-  { title: "Dashboard", icon: LayoutDashboard, url: "/" },
+  { title: "Dashboard", icon: LayoutDashboard url: "/" },
   { title: "Analytics", icon: BarChart3, url: "/analytics" },
   { title: "Users", icon: Users, url: "/users" },
   { title: "Reports", icon: FileText, url: "/reports" },
   { title: "Settings", icon: Settings, url: "/settings" },
-];
-
+]
 export function Sidebar({ collapsed, onToggle }: SidebarProps) {
   return (
     <aside
@@ -62,19 +61,19 @@ export function Sidebar({ collapsed, onToggle }: SidebarProps) {
 
         {/* User Section */}
         <div className="border-t border-sidebar-border p-3">
-          <div className={cn("flex items-center gap-3 rounded-lg px-3 py-2", !collapsed && "hover:bg-sidebar-accent")}>
+          <div className={cn("flex items-center gap-3 rounded-lg px-3 py-2", !colapsed && "hover:bg-sidebar-accent")}>
             <div className="flex h-8 w-8 items-center justify-center rounded-full bg-sidebar-primary text-sidebar-primary-foreground flex-shrink-0">
               <span className="text-sm font-medium">JD</span>
             </div>
             {!collapsed && (
-              <div className="flex-1 overflow-hidden">
-                <p className="text-sm font-medium text-sidebar-foreground truncate">John Doe</p>
+              <div className="fle-1 overflow-hidden">
+                <p classame="text-sm font-medium text-sidebar-foreground truncate">John Doe</p>
                 <p className="text-xs text-muted-foreground truncate">john@example.com</p>
               </div>
-            )}
-          </div>
+            )
+          </div
         </div>
       </div>
     </aside>
-  );
-}
+  )
+
